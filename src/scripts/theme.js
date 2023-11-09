@@ -2,7 +2,7 @@ const button = document.querySelector(".header__btn")
 const html = document.querySelector("html")
 let darkMode = false
 
-function themeChange(){
+export const themeChange = () => {
     darkMode = !darkMode
 
     html.classList.toggle("dark-mode")
@@ -13,10 +13,7 @@ function themeChange(){
 
 button.addEventListener("click", themeChange)
 
-//localStorage.setItem("theme", JSON.stringify(darkMode))
-
-
-function themeAnalysis(){
+export const themeAnalysis = () => {
     darkMode = JSON.parse(localStorage.getItem("theme"))
 
     if(darkMode){
@@ -24,4 +21,4 @@ function themeAnalysis(){
         button.classList.add("header__btn--dark-mode")
     }
 }
-themeAnalysis()
+//themeAnalysis()
