@@ -48,6 +48,7 @@ const createAlbumCard = (albumData) => {
   card.classList.add("album__item");
 
   // COVER IMG
+  card.classList.add("slide")
   albumCoverContainer.classList.add("album__cover-container");
   albumCoverImg.classList.add("album__cover");
   albumCoverImg.src = albumData.img;

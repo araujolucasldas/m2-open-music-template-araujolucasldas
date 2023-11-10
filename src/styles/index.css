@@ -131,6 +131,8 @@
   flex-direction: column;
   gap: 1.25rem;
   border-radius: 0.25rem;
+
+  transition: width ease-in-out 0.7s;
 }
 
 .album__item:hover {
@@ -148,6 +150,11 @@
   background-position: center;
 
   object-fit: cover;
+}
+
+.album__cover:hover {
+  scale: 1.1;
+  transition: ease-in-out 0.7s;
 }
 
 .album__details {
@@ -200,4 +207,24 @@
 .album__buy--button:hover {
   background-color: var(--color-brand-1);
   border-color: var(--color-brand-1);
+}
+
+@keyframes dropDown {
+  0% {transform: translateY(-100px)}
+  70% {transform: translateY(10px)}
+  100% {transform: translateY(0)}
+}
+
+.drop {
+  animation: dropDown 0.7s ease-in-out
+}
+
+@keyframes  slideIn {
+  0% {transform: translateX(-100px)}
+  70% {transform: translateX(5px)}
+  100% {transform: translateX(0)}
+}
+
+.slide {
+  animation: slideIn 0.7s ease-in-out ;
 }
