@@ -21,4 +21,3 @@ export const themeAnalysis = () => {
         button.classList.add("header__btn--dark-mode")
     }
 }
-//themeAnalysis()
